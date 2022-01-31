@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+      .table_item {
+        display: inline-block;
+        font-size: 20px;
+      }
+
+      .column-1 {
+        font-weight: bold;
+        width: 150px;
+        margin-left: 10px;
+      }
+      .column-2 {
+        width: 220px;
+      }
+      .column-3 {
+        width: 150px;
+      }
+      .column-4 {
+        width: 150px;
+      }
+      .column-5 {
+        width: 200px;
+      }
+      .column-6 {
+        width: 200px;
+      }
+      .column-7 {
+        width: 150px;
+      }
+      .column-8 {
+        width: 200px;
+      }
+      .column-9 {
+        width: 200px;
+      }
+
+      .header {
+        font-weight: bold;
+      }
+      span {
+        border: 1px solid #dcdcdc;
+        border-radius: 15px;
+        background-color: #dcdcdc;
+        padding: 5px;
+        font-size: 15px;
+      }
+      span::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: #696969;
+      }
+
+      span.active {
+        border: 1px solid #f4a460;
+        border-radius: 15px;
+        background-color: #f4a460;
+        padding: 5px;
+      }
+      span.active::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #ffff00;
+        border-radius: 100%;
+        background-color: #f4a460;
+      }
+
+      .search {
+        font-size: 20px;
+      }
+      button {
+        height: 50px;
+        cursor: pointer;
+        background: white;
+      }
+      button:before {
+        content: "\f002";
+        font-family: FontAwesome;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      input,
+      button {
+        border: none;
+      }
+      .navigation {
+        border: 1px solid black;
+      }
+      .table {
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form action="" method="get">
+        <div class="navigation">
+          <button type="submit"></button>
+          <input class="search" placeholder="Filter orders" type="text" />
+        </div>
+      </form>
+    </div>
+    <div class="table">
+      <div class="table_row header">
+        <input type="checkbox" />
+        <div class="table_item column-1">Order</div>
+        <div class="table_item column-2">Date</div>
+        <div class="table_item column-3">Customer</div>
+        <div class="table_item column-4">Total</div>
+        <div class="table_item column-5">Payment status</div>
+        <div class="table_item column-6">Fulfillment status</div>
+        <div class="table_item column-7">Items</div>
+        <div class="table_item column-8">Delivery method</div>
+        <div class="table_item column-9">Tags</div>
+      </div>
+      <hr />
+      <div class="table_row basic">
+        <input type="checkbox" />
+        <div class="table_item column-1">#1058</div>
+        <div class="table_item column-2">Thursday at 02:38 pm</div>
+        <div class="table_item column-3">No customer</div>
+        <div class="table_item column-4">$0.00</div>
+        <div class="table_item column-5"><span>Paid</span></div>
+        <div class="table_item column-6">
+          <span class="active">Unfulfiled</span>
+        </div>
+        <div class="table_item column-7">1 item</div>
+      </div>
+      <hr />
+      <div class="table_row basic">
+        <input type="checkbox" />
+        <div class="table_item column-1">#1057</div>
+        <div class="table_item column-2">Thursday at 02:35 pm</div>
+        <div class="table_item column-3">No customer</div>
+        <div class="table_item column-4">$0.00</div>
+        <div class="table_item column-5"><span>Paid</span></div>
+        <div class="table_item column-6">
+          <span class="active">Unfulfiled</span>
+        </div>
+        <div class="table_item column-7">1 item</div>
+      </div>
+      <hr />
+      <div class="table_row basic">
+        <input type="checkbox" />
+        <div class="table_item column-1">#1056</div>
+        <div class="table_item column-2">Thursday at 02:30 pm</div>
+        <div class="table_item column-3">No customer</div>
+        <div class="table_item column-4">$0.00</div>
+        <div class="table_item column-5"><span>Paid</span></div>
+        <div class="table_item column-6">
+          <span class="active">Unfulfiled</span>
+        </div>
+        <div class="table_item column-7">1 item</div>
+      </div>
+      <hr />
+      <div class="table_row basic">
+        <input type="checkbox" />
+        <div class="table_item column-1">#1055</div>
+        <div class="table_item column-2">Thursday at 02:20 pm</div>
+        <div class="table_item column-3">No customer</div>
+        <div class="table_item column-4">$0.00</div>
+        <div class="table_item column-5"><span>Paid</span></div>
+        <div class="table_item column-6">
+          <span class="active">Unfulfiled</span>
+        </div>
+        <div class="table_item column-7">1 item</div>
+      </div>
+      <hr />
+      <div class="table_row basic">
+        <input type="checkbox" />
+        <div class="table_item column-1">#1054</div>
+        <div class="table_item column-2">Thursday at 02:15 pm</div>
+        <div class="table_item column-3">No customer</div>
+        <div class="table_item column-4">$0.00</div>
+        <div class="table_item column-5"><span>Paid</span></div>
+        <div class="table_item column-6">
+          <span class="active">Unfulfiled</span>
+        </div>
+        <div class="table_item column-7">1 item</div>
+      </div>
+      <hr />
+      <div class="table_row basic">
+        <input type="checkbox" />
+        <div class="table_item column-1">#1053</div>
+        <div class="table_item column-2">Thursday at 02:10 pm</div>
+        <div class="table_item column-3">No customer</div>
+        <div class="table_item column-4">$330.00</div>
+        <div class="table_item column-5">
+          <span class="active">Payment pending</span>
+        </div>
+        <div class="table_item column-6">
+          <span class="active">Unfulfiled</span>
+        </div>
+        <div class="table_item column-7">1 item</div>
+      </div>
+      <hr />
+      <div class="table_row basic">
+        <input type="checkbox" />
+        <div class="table_item column-1">#1052</div>
+        <div class="table_item column-2">Thursday at 02:05 pm</div>
+        <div class="table_item column-3">No customer</div>
+        <div class="table_item column-4">$220.00</div>
+        <div class="table_item column-5">
+          <span class="active">Payment pending</span>
+        </div>
+        <div class="table_item column-6">
+          <span class="active">Unfulfiled</span>
+        </div>
+        <div class="table_item column-7">1 item</div>
+      </div>
+      <hr />
+      <div class="table_row basic">
+        <input type="checkbox" />
+        <div class="table_item column-1">#1051</div>
+        <div class="table_item column-2">Thursday at 02:00 pm</div>
+        <div class="table_item column-3">No customer</div>
+        <div class="table_item column-4">$100.00</div>
+        <div class="table_item column-5">
+          <span class="active">Payment pending</span>
+        </div>
+        <div class="table_item column-6">
+          <span class="active">Unfulfiled</span>
+        </div>
+        <div class="table_item column-7">1 item</div>
+      </div>
+      <hr />
+    </div>
+  </body>
+</html>
